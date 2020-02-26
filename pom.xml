@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>thehole.black</groupId>
     <artifactId>catchitcozucan</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
     <name>catchitcozucan</name>
     <description>nifty portable processing library</description>
     <packaging>jar</packaging>
@@ -230,7 +230,7 @@
         <connection>scm:git:git@github.com/OlaAronsson/catchitcozucan.git</connection>
         <developerConnection>scm:git:git@github.com:OlaAronsson/catchitcozucan.git</developerConnection>
         <url>https://github.com/OlaAronsson/catchitcozucan.git</url>
-        <tag>HEAD</tag>
+        <tag>catchitcozucan-1.2</tag>
     </scm>
 
     <profiles>

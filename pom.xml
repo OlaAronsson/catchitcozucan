@@ -20,6 +20,23 @@
         <url>https://github.com/OlaAronsson/catchitcozucan/issues</url>
     </issueManagement>
 
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Ola Aronsson</name>
+            <email>ola@thehole.black</email>
+            <organization>nollettnoll AB</organization>
+            <organizationUrl>https://nollettnoll.net</organizationUrl>
+            <timezone>UTC+01</timezone>
+        </developer>
+    </developers>
+    
     <dependencies>
         <dependency>
             <groupId>ch.qos.logback</groupId>

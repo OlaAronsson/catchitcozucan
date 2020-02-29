@@ -126,7 +126,7 @@
                         <include>**/*.Processor</include>
                     </includes>
                     <excludes>
-                        <exclude>thehole/black/process/demo/**</exclude>
+                        <exclude>com/github/olaaronsson/process/demo/**</exclude>
                         <include>**/*.xml</include>
                         <include>**/*.properties</include>
                     </excludes>
@@ -178,7 +178,7 @@
                 </executions>
             </plugin>
             <!-- for maven deploy and release -->
-            <plugin>
+<!--            <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.8.2</version>
                 <executions>
@@ -190,7 +190,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>

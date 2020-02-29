@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.olaaronsson</groupId>
     <artifactId>catchitcozucan</artifactId>
-    <version>1.7-SNAPSHOT</version>
+    <version>1.7</version>
     <name>catchitcozucan</name>
     <description>nifty portable processing library for stateful subjects</description>
     <url>https://github.com/OlaAronsson/catchitcozucan</url>
@@ -238,7 +238,7 @@
         <connection>scm:git:git@github.com/OlaAronsson/catchitcozucan.git</connection>
         <developerConnection>scm:git:git@github.com:OlaAronsson/catchitcozucan.git</developerConnection>
         <url>https://github.com/OlaAronsson/catchitcozucan.git</url>
-        <tag>HEAD</tag>
+        <tag>catchitcozucan-1.7</tag>
     </scm>
 
     <profiles>

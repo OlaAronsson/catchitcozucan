@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.olaaronsson</groupId>
     <artifactId>catchitcozucan</artifactId>
-    <version>1.6</version>
+    <version>1.7-SNAPSHOT</version>
     <name>catchitcozucan</name>
     <description>nifty portable processing library</description>
     <url>https://github.com/OlaAronsson/catchitcozucan</url>
@@ -252,7 +252,7 @@
         <connection>scm:git:git@github.com/OlaAronsson/catchitcozucan.git</connection>
         <developerConnection>scm:git:git@github.com:OlaAronsson/catchitcozucan.git</developerConnection>
         <url>https://github.com/OlaAronsson/catchitcozucan.git</url>
-        <tag>catchitcozucan-1.6</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <profiles>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.github.olaaronsson.process.demo.test.TestSuiteShoes
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.294 sec - in com.github.olaaronsson.process.demo.test.TestSuiteShoes

@@ -1,7 +1,0 @@
-.idea
-.target
-*.iml
-.project
-target
-release.properties
-pom.xml.releaseBackup

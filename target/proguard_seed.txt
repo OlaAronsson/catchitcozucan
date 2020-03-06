@@ -1,0 +1,268 @@
+com.github.olaaronsson.process.ErrorCodeCarrier
+com.github.olaaronsson.process.ErrorCodeCarrier: int getErrorCode()
+com.github.olaaronsson.process.MakeStep
+com.github.olaaronsson.process.MakeStep: java.lang.String description()
+com.github.olaaronsson.process.MakeStep: java.lang.String statusUponSuccess()
+com.github.olaaronsson.process.MakeStep: java.lang.String statusUponFailure()
+com.github.olaaronsson.process.MakeStep: java.lang.Class[] enumStateProvider()
+com.github.olaaronsson.process.MakeStep: java.lang.String sourceEncoding()
+com.github.olaaronsson.process.ProcessStatus
+com.github.olaaronsson.process.ProcessStep
+com.github.olaaronsson.process.ProcessStep: void execute()
+com.github.olaaronsson.process.ProcessStep: java.lang.String description()
+com.github.olaaronsson.process.ProcessStep: java.lang.Enum statusUponSuccess()
+com.github.olaaronsson.process.ProcessStep: java.lang.Enum statusUponFailure()
+com.github.olaaronsson.process.ProcessStep: java.lang.String processName()
+com.github.olaaronsson.process.exception.ProcessRuntimeException
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException()
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException(java.lang.String)
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException(java.lang.String,java.lang.Throwable)
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException(java.lang.Throwable)
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException(int)
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException(java.lang.String,int)
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException(java.lang.String,java.lang.Throwable,int)
+com.github.olaaronsson.process.exception.ProcessRuntimeException: ProcessRuntimeException(java.lang.Throwable,int)
+com.github.olaaronsson.process.exception.ProcessRuntimeException: int getErrorCode()
+com.github.olaaronsson.process.histogram.HistogramProvider
+com.github.olaaronsson.process.histogram.HistogramProvider: com.github.olaaronsson.process.histogram.HistogramStatus getHistogram(java.util.stream.Stream)
+com.github.olaaronsson.process.histogram.HistogramProvider: com.github.olaaronsson.process.histogram.HistogramStatus makeSampleHistogram(java.lang.Integer[])
+com.github.olaaronsson.process.histogram.HistogramStatus
+com.github.olaaronsson.process.histogram.HistogramStatus: HistogramStatus(java.lang.String,java.util.Map,java.lang.String)
+com.github.olaaronsson.process.histogram.HistogramStatus: HistogramStatus(java.lang.String,java.util.Map)
+com.github.olaaronsson.process.histogram.HistogramStatus: java.util.Map getRawData()
+com.github.olaaronsson.process.histogram.HistogramStatus: java.lang.String getLabel()
+com.github.olaaronsson.process.histogram.HistogramStatus: java.lang.Integer getActuallyFinishedPercent()
+com.github.olaaronsson.process.histogram.HistogramStatus: java.lang.Integer getActualProgressPercent()
+com.github.olaaronsson.process.histogram.HistogramStatus: java.lang.String toString()
+com.github.olaaronsson.process.histogram.HistogramStatus: java.lang.String toJson(boolean,boolean,boolean)
+com.github.olaaronsson.process.histogram.HistogramStatus: boolean equals(java.lang.Object)
+com.github.olaaronsson.process.histogram.HistogramStatus: int hashCode()
+com.github.olaaronsson.process.histogram.HistogramStatus: int compareTo(com.github.olaaronsson.process.histogram.HistogramStatus)
+com.github.olaaronsson.process.histogram.HistogramStatus: java.lang.String makeHistogramJson(java.lang.String,java.util.List,boolean,java.lang.Enum[])
+com.github.olaaronsson.process.histogram.HistogramStatus: java.lang.String makeHistogramJson(java.lang.String,java.util.List,boolean,java.lang.String[])
+com.github.olaaronsson.process.histogram.HistogramStatus: int compareTo(java.lang.Object)
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector: LifeCycleHistogramCollector(com.github.olaaronsson.process.histogram.LifeCycleProvider)
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector: java.lang.Enum[] getCycle()
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector: java.util.function.Supplier supplier()
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector: java.util.function.BiConsumer accumulator()
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector: java.util.function.BinaryOperator combiner()
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector: java.util.function.Function finisher()
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector: java.util.Set characteristics()
+com.github.olaaronsson.process.histogram.LifeCycleProvider
+com.github.olaaronsson.process.histogram.LifeCycleProvider: java.lang.Enum[] getCycle()
+com.github.olaaronsson.process.histogram.LifeCycleProvider: java.lang.Enum getCurrentStatus()
+com.github.olaaronsson.process.histogram.LifeCycleProvider: java.lang.String getCurrentProcess()
+com.github.olaaronsson.process.impl.JobAsync
+com.github.olaaronsson.process.impl.JobAsync: java.lang.String PROCESS_S_WAS_LEAKING_EXCEPTION_THIS_IS_NOT_HOW_THINGS_SHOULD_BE
+com.github.olaaronsson.process.impl.JobAsync: java.lang.String JOB_S_WAS_LEAKING_EXCEPTION_THIS_IS_NOT_HOW_THINGS_SHOULD_BE
+com.github.olaaronsson.process.impl.JobAsync: java.lang.String NOPE_CALL_GET_INSTANCE_FIRST
+com.github.olaaronsson.process.impl.JobAsync: java.lang.String AWAIT_TERMINATION_WAS_INTERRUPTED_BEFORE_CARRIED_OUT_NO_BIGGIE
+com.github.olaaronsson.process.impl.JobAsync: com.github.olaaronsson.process.impl.JobAsync getInstance()
+com.github.olaaronsson.process.impl.JobAsync: boolean isExecuting()
+com.github.olaaronsson.process.impl.JobAsync: void kill()
+com.github.olaaronsson.process.impl.JobAsync: void killAwaitTerminationBlocking(long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.impl.JobAsync: void killAwaitTerminationNonBlocking(long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.impl.JobAsync: void addProcess(com.github.olaaronsson.process.interfaces.Process)
+com.github.olaaronsson.process.impl.JobAsync: void addJob(com.github.olaaronsson.process.interfaces.Job)
+com.github.olaaronsson.process.impl.JobAsync: void addJobWithTimeout(com.github.olaaronsson.process.interfaces.Job,long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.impl.JobAsync: void addJobListener(com.github.olaaronsson.process.interfaces.AsyncJobListener)
+com.github.olaaronsson.process.impl.JobAsync: void addProcessListener(com.github.olaaronsson.process.interfaces.AsyncProcessListener)
+com.github.olaaronsson.process.impl.JobBase
+com.github.olaaronsson.process.impl.JobBase: JobBase()
+com.github.olaaronsson.process.impl.JobBase: boolean isExecuting()
+com.github.olaaronsson.process.impl.JobBase: com.github.olaaronsson.process.histogram.HistogramStatus getHistogram(java.util.stream.Stream)
+com.github.olaaronsson.process.impl.JobBase: com.github.olaaronsson.process.histogram.HistogramStatus makeSampleHistogram(java.lang.Integer[])
+com.github.olaaronsson.process.impl.JobBase: void exec(com.github.olaaronsson.process.interfaces.Process)
+com.github.olaaronsson.process.impl.JobBase: java.lang.String getTotalExectime()
+com.github.olaaronsson.process.impl.JobThreadSafe
+com.github.olaaronsson.process.impl.JobThreadSafe: com.github.olaaronsson.process.impl.JobThreadSafe init(java.lang.Object)
+com.github.olaaronsson.process.impl.JobThreadSafe: com.github.olaaronsson.process.impl.JobThreadSafe getInstance(java.lang.Class)
+com.github.olaaronsson.process.impl.JobThreadSafe: com.github.olaaronsson.process.histogram.HistogramStatus getHistogram(java.util.stream.Stream)
+com.github.olaaronsson.process.impl.JobThreadSafe: com.github.olaaronsson.process.histogram.HistogramStatus makeSampleHistogram(java.lang.Integer[])
+com.github.olaaronsson.process.impl.JobThreadSafe: java.lang.String name()
+com.github.olaaronsson.process.impl.JobThreadSafe: void doJob()
+com.github.olaaronsson.process.impl.JobThreadSafe: com.github.olaaronsson.process.interfaces.ProcessSubject provideSubjectSample()
+com.github.olaaronsson.process.impl.JobThreadSafe: boolean isExecuting()
+com.github.olaaronsson.process.impl.ProcessBase
+com.github.olaaronsson.process.impl.ProcessBase: ProcessBase(com.github.olaaronsson.process.interfaces.ProcessSubject,com.github.olaaronsson.process.interfaces.PersistenceService)
+com.github.olaaronsson.process.impl.ProcessBase: boolean executeStep(com.github.olaaronsson.process.ProcessStep)
+com.github.olaaronsson.process.impl.ProcessBase: com.github.olaaronsson.process.interfaces.ProcessSubject getSubject()
+com.github.olaaronsson.process.impl.ProcessBase: java.lang.String currentStatusDescription()
+com.github.olaaronsson.process.impl.ProcessLogging
+com.github.olaaronsson.process.impl.ProcessLogging: void initLogging()
+com.github.olaaronsson.process.impl.ProcessLogging: void initLogging(java.lang.String,java.lang.String,boolean)
+com.github.olaaronsson.process.impl.ProcessSubjectBase
+com.github.olaaronsson.process.impl.ProcessSubjectBase: java.lang.Enum status
+com.github.olaaronsson.process.impl.ProcessSubjectBase: ProcessSubjectBase()
+com.github.olaaronsson.process.impl.ProcessSubjectBase: void setStatus(java.lang.Enum)
+com.github.olaaronsson.process.impl.ProcessSubjectBase: void setProcessName(java.lang.String)
+com.github.olaaronsson.process.impl.ProcessSubjectBase: int getErrorCode()
+com.github.olaaronsson.process.impl.ProcessSubjectBase: java.lang.String doToString()
+com.github.olaaronsson.process.impl.ProcessSubjectBase: java.lang.Enum getCurrentStatus()
+com.github.olaaronsson.process.impl.ProcessSubjectBase: java.lang.String getCurrentProcess()
+com.github.olaaronsson.process.impl.ProcessSubjectBase$Status
+com.github.olaaronsson.process.impl.ProcessSubjectBase$Status: com.github.olaaronsson.process.impl.ProcessSubjectBase$Status PRE_PROCESS
+com.github.olaaronsson.process.impl.ProcessSubjectBase$Status: com.github.olaaronsson.process.impl.ProcessSubjectBase$Status PROCESS_FINISHED
+com.github.olaaronsson.process.impl.ProcessSubjectBase$Status: com.github.olaaronsson.process.impl.ProcessSubjectBase$Status[] values()
+com.github.olaaronsson.process.impl.ProcessSubjectBase$Status: com.github.olaaronsson.process.impl.ProcessSubjectBase$Status valueOf(java.lang.String)
+com.github.olaaronsson.process.impl.ProcessSubjectBase$Status: java.lang.Character getSts()
+com.github.olaaronsson.process.impl.ProcessingFlags
+com.github.olaaronsson.process.impl.ProcessingFlags: java.lang.String NEN_PROCESSING_LOG_DIR
+com.github.olaaronsson.process.impl.ProcessingFlags: java.lang.String NEN_PROCESSING_LOGGING_APP
+com.github.olaaronsson.process.impl.ProcessingFlags: java.lang.String NEN_PROCESSING_LOGGING_SEPARATE_FILE
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader: CustomClassLoader(java.lang.String,java.lang.ClassLoader)
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader: java.lang.Class loadClass(java.lang.String)
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer: CustomClassLoader$EnumContainer(java.lang.Class)
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer: com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable[] values()
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer: java.lang.String getClassName()
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer: java.lang.String getEnumFieldName()
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer: boolean isSane()
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer: java.lang.String getProblemDescription()
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable: java.lang.String name()
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepConstants
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepConstants: java.lang.String NL
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepConstants: java.nio.charset.Charset UTF8_CHARSET
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepLookup
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepLookup: java.lang.String TMP_COMP_PATH
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepLookup: java.util.Set annotatedElementsToAppenders(java.util.Set,java.util.Set)
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor: DaProcessStepProcessor()
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor: void init(javax.annotation.processing.ProcessingEnvironment)
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor: boolean process(java.util.Set,javax.annotation.processing.RoundEnvironment)
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor: java.util.Set getSupportedAnnotationTypes()
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor: javax.lang.model.SourceVersion getSupportedSourceVersion()
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender: java.lang.String doToString()
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender: void setJavaScrFileForStatusClass(java.io.File)
+com.github.olaaronsson.process.impl.source.processor.ElementToWork
+com.github.olaaronsson.process.impl.source.processor.ElementToWork: java.lang.String UNDERSCORE
+com.github.olaaronsson.process.impl.source.processor.ElementToWork: java.lang.String doToString()
+com.github.olaaronsson.process.interfaces.AsyncExecutor
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void addProcess(com.github.olaaronsson.process.interfaces.Process)
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void addJob(com.github.olaaronsson.process.interfaces.Job)
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void addJobWithTimeout(com.github.olaaronsson.process.interfaces.Job,long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void addJobListener(com.github.olaaronsson.process.interfaces.AsyncJobListener)
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void addProcessListener(com.github.olaaronsson.process.interfaces.AsyncProcessListener)
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void kill()
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void killAwaitTerminationBlocking(long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.interfaces.AsyncExecutor: void killAwaitTerminationNonBlocking(long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.interfaces.AsyncJobListener
+com.github.olaaronsson.process.interfaces.AsyncJobListener: void jobExiting(com.github.olaaronsson.process.interfaces.Job)
+com.github.olaaronsson.process.interfaces.AsyncProcessListener
+com.github.olaaronsson.process.interfaces.AsyncProcessListener: void processExiting(com.github.olaaronsson.process.interfaces.Process)
+com.github.olaaronsson.process.interfaces.Job
+com.github.olaaronsson.process.interfaces.Job: java.lang.String name()
+com.github.olaaronsson.process.interfaces.Job: void doJob()
+com.github.olaaronsson.process.interfaces.Job: com.github.olaaronsson.process.interfaces.ProcessSubject provideSubjectSample()
+com.github.olaaronsson.process.interfaces.Job: boolean isExecuting()
+com.github.olaaronsson.process.interfaces.PersistenceService
+com.github.olaaronsson.process.interfaces.PersistenceService: void save(com.github.olaaronsson.process.interfaces.ProcessSubject)
+com.github.olaaronsson.process.interfaces.Process
+com.github.olaaronsson.process.interfaces.Process: java.lang.String name()
+com.github.olaaronsson.process.interfaces.Process: void process()
+com.github.olaaronsson.process.interfaces.Process: java.lang.Enum[] criteriaStates()
+com.github.olaaronsson.process.interfaces.Process: java.lang.Enum finishedState()
+com.github.olaaronsson.process.interfaces.ProcessSubject
+com.github.olaaronsson.process.interfaces.ProcessSubject: java.lang.Integer id()
+com.github.olaaronsson.process.interfaces.ProcessSubject: java.lang.String subjectIdentifier()
+com.github.olaaronsson.process.interfaces.ProcessSubject: int getErrorCode()
+com.github.olaaronsson.process.interfaces.WorkingEntity
+com.github.olaaronsson.process.interfaces.WorkingEntity: boolean isExecuting()
+com.github.olaaronsson.process.internal.util.MD5Digest
+com.github.olaaronsson.process.internal.util.MD5Digest: com.github.olaaronsson.process.internal.util.MD5Digest getInstance()
+com.github.olaaronsson.process.internal.util.MD5Digest: java.lang.String digest(java.io.File)
+com.github.olaaronsson.process.internal.util.MD5Digest: java.lang.String digestMessage(java.lang.String)
+com.github.olaaronsson.process.internal.util.MD5Digest$DigestType: com.github.olaaronsson.process.internal.util.MD5Digest$DigestType[] values()
+com.github.olaaronsson.process.internal.util.MD5Digest$DigestType: com.github.olaaronsson.process.internal.util.MD5Digest$DigestType valueOf(java.lang.String)
+com.github.olaaronsson.process.internal.util.SizeUtils
+com.github.olaaronsson.process.internal.util.SizeUtils: java.lang.String getFormattedMillisPrintoutFriendly(long)
+com.github.olaaronsson.process.internal.util.domain.BaseDomainObject
+com.github.olaaronsson.process.internal.util.domain.BaseDomainObject: BaseDomainObject()
+com.github.olaaronsson.process.internal.util.domain.BaseDomainObject: int hashCode()
+com.github.olaaronsson.process.internal.util.domain.BaseDomainObject: boolean equals(java.lang.Object)
+com.github.olaaronsson.process.internal.util.domain.BaseDomainObject: java.lang.String toString()
+com.github.olaaronsson.process.internal.util.domain.StringUtils
+com.github.olaaronsson.process.internal.util.domain.StringUtils: boolean isBlank(java.lang.String)
+com.github.olaaronsson.process.internal.util.domain.StringUtils: boolean hasContents(java.lang.String)
+com.github.olaaronsson.process.internal.util.domain.ToStringAble
+com.github.olaaronsson.process.internal.util.domain.ToStringAble: java.lang.String doToString()
+com.github.olaaronsson.process.internal.util.domain.ToStringBuilder
+com.github.olaaronsson.process.internal.util.domain.ToStringBuilder: ToStringBuilder(java.lang.String,java.lang.Object)
+com.github.olaaronsson.process.internal.util.domain.ToStringBuilder: ToStringBuilder()
+com.github.olaaronsson.process.internal.util.domain.ToStringBuilder: com.github.olaaronsson.process.internal.util.domain.ToStringBuilder append(java.lang.String,java.lang.Object)
+com.github.olaaronsson.process.internal.util.domain.ToStringBuilder: java.lang.String doToString()
+com.github.olaaronsson.process.internal.util.id.IdGenerator
+com.github.olaaronsson.process.internal.util.id.IdGenerator: com.github.olaaronsson.process.internal.util.id.IdGenerator getInstance()
+com.github.olaaronsson.process.internal.util.id.IdGenerator: java.lang.Integer getNextId()
+com.github.olaaronsson.process.internal.util.id.IdGenerator: java.lang.String getId(int)
+com.github.olaaronsson.process.internal.util.id.IdGenerator: java.lang.String getIdMoreRandom(int,int)
+com.github.olaaronsson.process.internal.util.io.Haltable
+com.github.olaaronsson.process.internal.util.io.Haltable: void halt()
+com.github.olaaronsson.process.internal.util.io.IO
+com.github.olaaronsson.process.internal.util.io.IO: java.lang.String DEF_ENCODING
+com.github.olaaronsson.process.internal.util.io.IO: java.io.File makeOrUseDir(java.lang.String)
+com.github.olaaronsson.process.internal.util.io.IO: boolean deleteRecursively(java.io.File)
+com.github.olaaronsson.process.internal.util.io.IO: void overwriteStringToFileWithEncoding(java.lang.String,java.lang.String,java.lang.String)
+com.github.olaaronsson.process.internal.util.io.IO: java.lang.String fileToString(java.lang.String,java.nio.charset.Charset)
+com.github.olaaronsson.process.internal.util.io.IO: void close(java.io.InputStream)
+com.github.olaaronsson.process.internal.util.io.IO: boolean hasContents(java.lang.String)
+com.github.olaaronsson.process.internal.util.io.IO$CouldNotCreateDirException
+com.github.olaaronsson.process.internal.util.io.IO$CouldNotCreateDirException: IO$CouldNotCreateDirException()
+com.github.olaaronsson.process.internal.util.io.IO$DirExistsButCannotBeWritteToException
+com.github.olaaronsson.process.internal.util.io.IO$DirExistsButCannotBeWritteToException: IO$DirExistsButCannotBeWritteToException()
+com.github.olaaronsson.process.internal.util.io.IO$FileExistsButIsNotADirectoryException
+com.github.olaaronsson.process.internal.util.io.IO$FileExistsButIsNotADirectoryException: IO$FileExistsButIsNotADirectoryException()
+com.github.olaaronsson.process.internal.util.io.LoggingService
+com.github.olaaronsson.process.internal.util.io.LoggingService: void setRootLogLevel(ch.qos.logback.classic.Level)
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: com.github.olaaronsson.process.internal.util.io.LoggingService getInstance()
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: void initForApp(java.lang.String)
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: void initForApp(java.lang.String,boolean)
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: void init(java.lang.String,java.lang.String)
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: void init(java.lang.String,java.lang.String,boolean)
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: void init(java.lang.String,java.lang.String,boolean,java.lang.String)
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: void setRootLogLevel(ch.qos.logback.classic.Level)
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: void halt()
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup: ch.qos.logback.classic.Level resolveLevel(java.lang.String)
+com.github.olaaronsson.process.internal.util.reflect.ReflectionUtils
+com.github.olaaronsson.process.internal.util.reflect.ReflectionUtils: java.lang.reflect.Field getFieldRecursivelySilentFromInstance(java.lang.Object,java.lang.String)
+com.github.olaaronsson.process.internal.util.reflect.ReflectionUtils: java.lang.Object getFieldValueSilent(java.lang.Object,java.lang.String)
+com.github.olaaronsson.process.internal.util.thread.ExitHook
+com.github.olaaronsson.process.internal.util.thread.ExitHook: ExitHook()
+com.github.olaaronsson.process.internal.util.thread.ExitHook: ExitHook(java.lang.Thread)
+com.github.olaaronsson.process.internal.util.thread.ExitHook: ExitHook(com.github.olaaronsson.process.internal.util.thread.Exitable)
+com.github.olaaronsson.process.internal.util.thread.ExitHook: void run()
+com.github.olaaronsson.process.internal.util.thread.ExitHook: void addExitHook(java.lang.Thread)
+com.github.olaaronsson.process.internal.util.thread.ExitHook: void addExitHook(com.github.olaaronsson.process.internal.util.thread.Exitable)
+com.github.olaaronsson.process.internal.util.thread.ExitHook: void add(java.lang.Object)
+com.github.olaaronsson.process.internal.util.thread.Exitable
+com.github.olaaronsson.process.internal.util.thread.Exitable: void exitz()
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool: SimpleOneThreadedCacheableThreadPool()
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool: void submit(java.lang.Runnable)
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool: void submitWithTimeout(java.lang.Runnable,long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool: void stopServer()
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool: void awaitTerminationNonBlocking(long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool: void awaitTerminationBlocking(long,java.util.concurrent.TimeUnit)
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool: void exitz()
+com.github.olaaronsson.process.util.ClassAnnotationUtil
+com.github.olaaronsson.process.util.ClassAnnotationUtil: ClassAnnotationUtil()
+com.github.olaaronsson.process.util.ClassAnnotationUtil: java.lang.String getValueOverTypeMirror(com.github.olaaronsson.process.util.ClassAnnotationUtil$GetClassValue)
+com.github.olaaronsson.process.util.ClassAnnotationUtil$GetClassValue
+com.github.olaaronsson.process.util.ClassAnnotationUtil$GetClassValue: void execute()
+com.github.olaaronsson.process.util.MavenWriter
+com.github.olaaronsson.process.util.MavenWriter: java.lang.String MESSAGE_SEPARATOR
+com.github.olaaronsson.process.util.MavenWriter: java.lang.String COLON
+com.github.olaaronsson.process.util.MavenWriter: com.github.olaaronsson.process.util.MavenWriter getInstance(javax.annotation.processing.Messager)
+com.github.olaaronsson.process.util.MavenWriter: com.github.olaaronsson.process.util.MavenWriter getInstance()
+com.github.olaaronsson.process.util.MavenWriter: void error(javax.lang.model.element.Element,java.lang.String,java.lang.Object[])
+com.github.olaaronsson.process.util.MavenWriter: void error(java.lang.String)
+com.github.olaaronsson.process.util.MavenWriter: void info(java.lang.String)
+com.github.olaaronsson.process.util.MavenWriter: void warn(java.lang.String)
+com.github.olaaronsson.process.util.MavenWriter: java.lang.String formattedErrors(java.lang.String)
+com.github.olaaronsson.process.util.ThrowableUtils
+com.github.olaaronsson.process.util.ThrowableUtils: java.lang.String getTopStackInfo(java.lang.Throwable)

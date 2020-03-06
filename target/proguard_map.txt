@@ -1,0 +1,655 @@
+com.github.olaaronsson.process.ErrorCodeCarrier -> com.github.olaaronsson.process.ErrorCodeCarrier:
+    int getErrorCode() -> getErrorCode
+com.github.olaaronsson.process.MakeStep -> com.github.olaaronsson.process.MakeStep:
+    java.lang.String description() -> description
+    java.lang.String statusUponSuccess() -> statusUponSuccess
+    java.lang.String statusUponFailure() -> statusUponFailure
+    java.lang.Class[] enumStateProvider() -> enumStateProvider
+    java.lang.String sourceEncoding() -> sourceEncoding
+com.github.olaaronsson.process.ProcessStatus -> com.github.olaaronsson.process.ProcessStatus:
+com.github.olaaronsson.process.ProcessStep -> com.github.olaaronsson.process.ProcessStep:
+    void execute() -> execute
+    java.lang.String description() -> description
+    java.lang.Enum statusUponSuccess() -> statusUponSuccess
+    java.lang.Enum statusUponFailure() -> statusUponFailure
+    java.lang.String processName() -> processName
+com.github.olaaronsson.process.exception.ProcessRuntimeException -> com.github.olaaronsson.process.exception.ProcessRuntimeException:
+    int errorCode -> a
+    11:13:void <init>() -> <init>
+    16:18:void <init>(java.lang.String) -> <init>
+    21:23:void <init>(java.lang.String,java.lang.Throwable) -> <init>
+    26:28:void <init>(java.lang.Throwable) -> <init>
+    31:33:void <init>(int) -> <init>
+    36:38:void <init>(java.lang.String,int) -> <init>
+    41:43:void <init>(java.lang.String,java.lang.Throwable,int) -> <init>
+    46:48:void <init>(java.lang.Throwable,int) -> <init>
+    52:52:int getErrorCode() -> getErrorCode
+com.github.olaaronsson.process.histogram.HistogramProvider -> com.github.olaaronsson.process.histogram.HistogramProvider:
+    com.github.olaaronsson.process.histogram.HistogramStatus getHistogram(java.util.stream.Stream) -> getHistogram
+    com.github.olaaronsson.process.histogram.HistogramStatus makeSampleHistogram(java.lang.Integer[]) -> makeSampleHistogram
+com.github.olaaronsson.process.histogram.HistogramStatus -> com.github.olaaronsson.process.histogram.HistogramStatus:
+    java.lang.String ENTITY_NAMES_PROCESS_HISTOGRAM_BUCKET_NAMES -> a
+    java.lang.String nameOfHistogram -> b
+    java.lang.Integer[] data -> a
+    java.lang.String[] dataLabels -> a
+    long sum -> a
+    java.lang.Integer actuallyFinishedPercent -> a
+    java.lang.Integer actualProgressPercent -> b
+    java.util.Map rawData -> a
+    java.lang.String failureStatusRegExp -> c
+    58:60:void <init>(java.lang.String,java.util.Map,java.lang.String) -> <init>
+    62:84:void <init>(java.lang.String,java.util.Map) -> <init>
+    1265:1275:int[] getProgress(java.util.Map):265:275 -> <init>
+    1265:1275:void <init>(java.lang.String,java.util.Map):75 -> <init>
+    87:87:java.util.Map getRawData() -> getRawData
+    91:91:java.lang.String getLabel() -> getLabel
+    95:95:java.lang.Integer getActuallyFinishedPercent() -> getActuallyFinishedPercent
+    99:99:java.lang.Integer getActualProgressPercent() -> getActualProgressPercent
+    104:104:java.lang.String toString() -> toString
+    108:192:java.lang.String toJson(boolean,boolean,boolean) -> toJson
+    197:202:boolean equals(java.lang.Object) -> equals
+    207:207:int hashCode() -> hashCode
+    212:212:int compareTo(com.github.olaaronsson.process.histogram.HistogramStatus) -> compareTo
+    216:218:java.lang.String makeHistogramJson(java.lang.String,java.util.List,boolean,java.lang.Enum[]) -> makeHistogramJson
+    222:252:java.lang.String makeHistogramJson(java.lang.String,java.util.List,boolean,java.lang.String[]) -> makeHistogramJson
+    256:260:boolean labelSignifiesAFailure(java.lang.String) -> a
+    280:291:long getHistogramStepsDone(java.util.Map) -> a
+    14:14:int compareTo(java.lang.Object) -> compareTo
+    285:285:boolean lambda$getHistogramStepsDone$10(java.lang.String[],int,java.util.Map$Entry) -> a
+    265:265:int lambda$getProgress$9(java.lang.Integer) -> a
+    237:245:void lambda$makeHistogramJson$8(boolean,java.lang.StringBuilder,com.github.olaaronsson.process.histogram.HistogramStatus) -> a
+    223:223:void lambda$makeHistogramJson$7(java.lang.StringBuilder,java.lang.String) -> a
+    179:179:void lambda$toJson$6(java.lang.StringBuilder,java.lang.Integer) -> a
+    150:150:void lambda$toJson$5(java.lang.StringBuilder,java.lang.Integer) -> b
+    137:137:void lambda$toJson$4(java.lang.StringBuilder,java.lang.Integer) -> c
+    120:120:java.lang.String[] lambda$toJson$3(int) -> a
+    119:119:void lambda$toJson$2(java.lang.StringBuilder,java.util.List,java.lang.String) -> a
+    1295:1297:void appendActual(java.lang.StringBuilder,java.util.List,java.lang.String):295:297 -> a
+    1295:1297:void lambda$toJson$2(java.lang.StringBuilder,java.util.List,java.lang.String):119 -> a
+    116:116:void lambda$toJson$1(java.lang.StringBuilder,java.lang.String) -> b
+    78:78:int lambda$new$0(java.lang.Integer) -> b
+    23:23:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector -> com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector:
+    com.github.olaaronsson.process.histogram.LifeCycleProvider lifeCycle -> a
+    20:22:void <init>(com.github.olaaronsson.process.histogram.LifeCycleProvider) -> <init>
+    25:25:java.lang.Enum[] getCycle() -> getCycle
+    30:32:java.util.function.Supplier supplier() -> supplier
+    37:37:java.util.function.BiConsumer accumulator() -> accumulator
+    42:42:java.util.function.BinaryOperator combiner() -> combiner
+    51:51:java.util.function.Function finisher() -> finisher
+    56:56:java.util.Set characteristics() -> characteristics
+    43:45:java.util.Map lambda$combiner$4(java.util.Map,java.util.Map) -> a
+    44:44:void lambda$null$3(java.util.Map,java.util.Map,java.util.Map,java.lang.Enum) -> a
+    37:37:void lambda$accumulator$2(java.util.Map,com.github.olaaronsson.process.histogram.LifeCycleProvider) -> a
+    32:32:java.util.Map lambda$supplier$1(java.util.Map) -> a
+    31:31:void lambda$supplier$0(java.util.Map,java.lang.Enum) -> a
+com.github.olaaronsson.process.histogram.LifeCycleProvider -> com.github.olaaronsson.process.histogram.LifeCycleProvider:
+    java.lang.Enum[] getCycle() -> getCycle
+    java.lang.Enum getCurrentStatus() -> getCurrentStatus
+    java.lang.String getCurrentProcess() -> getCurrentProcess
+com.github.olaaronsson.process.impl.InternalJobNonRuntimeException -> a:
+    int errorCode -> a
+    11:13:void <init>(java.lang.String,java.lang.Throwable) -> <init>
+    17:17:int getErrorCode() -> getErrorCode
+com.github.olaaronsson.process.impl.InternalProcessNonRuntimeException -> b:
+    int errorCode -> a
+    11:13:void <init>(java.lang.String,java.lang.Throwable) -> <init>
+    17:17:int getErrorCode() -> getErrorCode
+com.github.olaaronsson.process.impl.InternalProcessOtherRuntimeException -> c:
+    int errorCode -> a
+    11:13:void <init>(java.lang.String,java.lang.Throwable) -> <init>
+    17:17:int getErrorCode() -> getErrorCode
+com.github.olaaronsson.process.impl.JobAsync -> com.github.olaaronsson.process.impl.JobAsync:
+    java.lang.String PROCESS_S_WAS_LEAKING_EXCEPTION_THIS_IS_NOT_HOW_THINGS_SHOULD_BE -> PROCESS_S_WAS_LEAKING_EXCEPTION_THIS_IS_NOT_HOW_THINGS_SHOULD_BE
+    java.lang.String JOB_S_WAS_LEAKING_EXCEPTION_THIS_IS_NOT_HOW_THINGS_SHOULD_BE -> JOB_S_WAS_LEAKING_EXCEPTION_THIS_IS_NOT_HOW_THINGS_SHOULD_BE
+    java.lang.String NOPE_CALL_GET_INSTANCE_FIRST -> NOPE_CALL_GET_INSTANCE_FIRST
+    java.lang.String AWAIT_TERMINATION_WAS_INTERRUPTED_BEFORE_CARRIED_OUT_NO_BIGGIE -> AWAIT_TERMINATION_WAS_INTERRUPTED_BEFORE_CARRIED_OUT_NO_BIGGIE
+    com.github.olaaronsson.process.impl.JobAsync INSTANCE -> a
+    com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool pool -> a
+    java.util.List listenersJobs -> a
+    java.util.List listenersProcesses -> b
+    java.util.HashSet jobIds -> a
+    org.slf4j.Logger LOGGER -> a
+    39:44:void <init>() -> <init>
+    47:50:com.github.olaaronsson.process.impl.JobAsync getInstance() -> getInstance
+    55:58:boolean isExecuting() -> isExecuting
+    63:64:void kill() -> kill
+    69:73:void killAwaitTerminationBlocking(long,java.util.concurrent.TimeUnit) -> killAwaitTerminationBlocking
+    77:78:void killAwaitTerminationNonBlocking(long,java.util.concurrent.TimeUnit) -> killAwaitTerminationNonBlocking
+    82:86:void addProcess(com.github.olaaronsson.process.interfaces.Process) -> addProcess
+    90:94:void addJob(com.github.olaaronsson.process.interfaces.Job) -> addJob
+    98:102:void addJobWithTimeout(com.github.olaaronsson.process.interfaces.Job,long,java.util.concurrent.TimeUnit) -> addJobWithTimeout
+    106:107:void addJobListener(com.github.olaaronsson.process.interfaces.AsyncJobListener) -> addJobListener
+    111:112:void addProcessListener(com.github.olaaronsson.process.interfaces.AsyncProcessListener) -> addProcessListener
+    19:19:java.util.HashSet access$000(com.github.olaaronsson.process.impl.JobAsync) -> a
+    19:19:org.slf4j.Logger access$100() -> a
+    19:19:java.util.List access$200(com.github.olaaronsson.process.impl.JobAsync) -> a
+    19:19:java.util.List access$300(com.github.olaaronsson.process.impl.JobAsync) -> b
+    32:37:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.impl.JobAsync$JobRunnable -> com.github.olaaronsson.process.impl.JobAsync$a:
+    com.github.olaaronsson.process.interfaces.Job job -> a
+    java.lang.String id -> a
+    com.github.olaaronsson.process.impl.JobAsync this$0 -> a
+    118:121:void <init>(com.github.olaaronsson.process.impl.JobAsync,com.github.olaaronsson.process.interfaces.Job) -> <init>
+    125:134:void run() -> run
+    133:133:void lambda$run$0(com.github.olaaronsson.process.interfaces.AsyncJobListener) -> a
+com.github.olaaronsson.process.impl.JobAsync$ProcessRunnable -> com.github.olaaronsson.process.impl.JobAsync$b:
+    com.github.olaaronsson.process.interfaces.Process process -> a
+    java.lang.String id -> a
+    com.github.olaaronsson.process.impl.JobAsync this$0 -> a
+    141:144:void <init>(com.github.olaaronsson.process.impl.JobAsync,com.github.olaaronsson.process.interfaces.Process) -> <init>
+    148:157:void run() -> run
+    156:156:void lambda$run$0(com.github.olaaronsson.process.interfaces.AsyncProcessListener) -> a
+com.github.olaaronsson.process.impl.JobBase -> com.github.olaaronsson.process.impl.JobBase:
+    com.github.olaaronsson.process.histogram.LifeCycleHistogramCollector cycleHistogramCollector -> a
+    long processInstanceExectime -> a
+    long totalExectime -> b
+    int numberOfProcesses -> a
+    boolean amIWorking -> a
+    org.slf4j.Logger LOGGER -> a
+    22:22:void <init>() -> <init>
+    39:39:boolean isExecuting() -> isExecuting
+    44:47:com.github.olaaronsson.process.histogram.HistogramStatus getHistogram(java.util.stream.Stream) -> getHistogram
+    52:55:com.github.olaaronsson.process.histogram.HistogramStatus makeSampleHistogram(java.lang.Integer[]) -> makeSampleHistogram
+    59:94:void exec(com.github.olaaronsson.process.interfaces.Process) -> exec
+    1178:1178:java.lang.Enum com.github.olaaronsson.process.impl.ProcessBase.getCurrentStatusUponFailure():178:178 -> exec
+    1178:1178:void exec(com.github.olaaronsson.process.interfaces.Process):76 -> exec
+    97:105:java.lang.String getTotalExectime() -> getTotalExectime
+    109:117:java.util.Map makeUpData(java.lang.Integer[]) -> a
+    110:110:void lambda$makeUpData$0(java.util.List,java.lang.Enum) -> a
+    30:35:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.impl.JobThreadSafe -> com.github.olaaronsson.process.impl.JobThreadSafe:
+    java.util.Map INSTANCE_MAP -> a
+    com.github.olaaronsson.process.interfaces.Job job -> a
+    com.github.olaaronsson.process.histogram.HistogramProvider histogramProvider -> a
+    boolean isExecuting -> a
+    com.github.olaaronsson.process.impl.JobThreadSafe$ThreadSafeJob threadSafeJobWrapper -> a
+    22:58:void <init>(java.lang.Object) -> <init>
+    61:72:com.github.olaaronsson.process.impl.JobThreadSafe init(java.lang.Object) -> init
+    76:80:com.github.olaaronsson.process.impl.JobThreadSafe getInstance(java.lang.Class) -> getInstance
+    85:85:com.github.olaaronsson.process.histogram.HistogramStatus getHistogram(java.util.stream.Stream) -> getHistogram
+    90:90:com.github.olaaronsson.process.histogram.HistogramStatus makeSampleHistogram(java.lang.Integer[]) -> makeSampleHistogram
+    95:95:java.lang.String name() -> name
+    100:101:void doJob() -> doJob
+    105:105:com.github.olaaronsson.process.interfaces.ProcessSubject provideSubjectSample() -> provideSubjectSample
+    110:110:boolean isExecuting() -> isExecuting
+    14:14:com.github.olaaronsson.process.histogram.HistogramProvider access$000(com.github.olaaronsson.process.impl.JobThreadSafe) -> a
+    14:14:com.github.olaaronsson.process.interfaces.Job access$100(com.github.olaaronsson.process.impl.JobThreadSafe) -> a
+    14:14:boolean access$200(com.github.olaaronsson.process.impl.JobThreadSafe) -> a
+    14:14:boolean access$202(com.github.olaaronsson.process.impl.JobThreadSafe,boolean) -> a
+    16:16:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.impl.JobThreadSafe$1 -> com.github.olaaronsson.process.impl.JobThreadSafe$1:
+    com.github.olaaronsson.process.impl.JobThreadSafe this$0 -> a
+    26:26:void <init>(com.github.olaaronsson.process.impl.JobThreadSafe) -> <init>
+    30:30:com.github.olaaronsson.process.histogram.HistogramStatus getHistogram(java.util.stream.Stream) -> getHistogram
+    35:35:com.github.olaaronsson.process.histogram.HistogramStatus makeSampleHistogram(java.lang.Integer[]) -> makeSampleHistogram
+    40:40:java.lang.String nameThreadSafe() -> a
+    45:51:void doJobThreadSafe() -> a
+    55:55:com.github.olaaronsson.process.interfaces.ProcessSubject provideSubjectSampleThreadSafe() -> a
+com.github.olaaronsson.process.impl.JobThreadSafe$ThreadSafeJob -> com.github.olaaronsson.process.impl.JobThreadSafe$a:
+    java.lang.String nameThreadSafe() -> a
+    void doJobThreadSafe() -> a
+    com.github.olaaronsson.process.interfaces.ProcessSubject provideSubjectSampleThreadSafe() -> a
+com.github.olaaronsson.process.impl.ProcessBase -> com.github.olaaronsson.process.impl.ProcessBase:
+    boolean hasBailed -> a
+    com.github.olaaronsson.process.interfaces.ProcessSubject processSubject -> a
+    java.lang.reflect.Method stsMethod -> a
+    java.lang.Class statusClass -> a
+    com.github.olaaronsson.process.interfaces.PersistenceService persistenceService -> a
+    java.lang.Enum statusUponFailure -> a
+    org.slf4j.Logger LOGGER -> a
+    24:54:void <init>(com.github.olaaronsson.process.interfaces.ProcessSubject,com.github.olaaronsson.process.interfaces.PersistenceService) -> <init>
+    1052:1053:void com.github.olaaronsson.process.impl.ProcessSubjectBase.clearError():52:53 -> <init>
+    1052:1053:void <init>(com.github.olaaronsson.process.interfaces.ProcessSubject,com.github.olaaronsson.process.interfaces.PersistenceService):34 -> <init>
+    73:107:boolean executeStep(com.github.olaaronsson.process.ProcessStep) -> executeStep
+    1154:1154:boolean hasBailed():154:154 -> executeStep
+    1154:1154:boolean executeStep(com.github.olaaronsson.process.ProcessStep):73 -> executeStep
+    2052:2053:void com.github.olaaronsson.process.impl.ProcessSubjectBase.clearError():52:53 -> executeStep
+    2052:2053:boolean executeStep(com.github.olaaronsson.process.ProcessStep):74 -> executeStep
+    2111:2112:void setProcessName(java.lang.String):111:112 -> executeStep
+    2111:2112:boolean executeStep(com.github.olaaronsson.process.ProcessStep):75 -> executeStep
+    2174:2175:void currentStatusUponFailure(java.lang.Enum):174:175 -> executeStep
+    2174:2175:boolean executeStep(com.github.olaaronsson.process.ProcessStep):76 -> executeStep
+    3166:3166:java.lang.String subjectIdentifier():166:166 -> executeStep
+    3166:3166:boolean executeStep(com.github.olaaronsson.process.ProcessStep):77 -> executeStep
+    3174:3175:void currentStatusUponFailure(java.lang.Enum):174:175 -> executeStep
+    3174:3175:boolean executeStep(com.github.olaaronsson.process.ProcessStep):95 -> executeStep
+    4154:4154:boolean hasBailed():154:154 -> executeStep
+    4154:4154:boolean executeStep(com.github.olaaronsson.process.ProcessStep):96 -> executeStep
+    4174:4175:void currentStatusUponFailure(java.lang.Enum):174:175 -> executeStep
+    4174:4175:boolean executeStep(com.github.olaaronsson.process.ProcessStep):95 -> executeStep
+    5154:5154:boolean hasBailed():154:154 -> executeStep
+    5154:5154:boolean executeStep(com.github.olaaronsson.process.ProcessStep):96 -> executeStep
+    5174:5175:void currentStatusUponFailure(java.lang.Enum):174:175 -> executeStep
+    5174:5175:boolean executeStep(com.github.olaaronsson.process.ProcessStep):95 -> executeStep
+    6154:6154:boolean hasBailed():154:154 -> executeStep
+    6154:6154:boolean executeStep(com.github.olaaronsson.process.ProcessStep):96 -> executeStep
+    6174:6175:void currentStatusUponFailure(java.lang.Enum):174:175 -> executeStep
+    6174:6175:boolean executeStep(com.github.olaaronsson.process.ProcessStep):95 -> executeStep
+    7154:7154:boolean hasBailed():154:154 -> executeStep
+    7154:7154:boolean executeStep(com.github.olaaronsson.process.ProcessStep):96 -> executeStep
+    7174:7175:void currentStatusUponFailure(java.lang.Enum):174:175 -> executeStep
+    7174:7175:boolean executeStep(com.github.olaaronsson.process.ProcessStep):95 -> executeStep
+    8154:8154:boolean hasBailed():154:154 -> executeStep
+    8154:8154:boolean executeStep(com.github.olaaronsson.process.ProcessStep):96 -> executeStep
+    9154:9154:boolean hasBailed():154:154 -> executeStep
+    9154:9154:boolean executeStep(com.github.olaaronsson.process.ProcessStep):107 -> executeStep
+    115:115:com.github.olaaronsson.process.interfaces.ProcessSubject getSubject() -> getSubject
+    119:119:java.lang.String currentStatusDescription() -> currentStatusDescription
+    123:123:boolean finished() -> a
+    127:127:java.lang.Enum getCurrentStatus() -> a
+    132:145:java.lang.String getStatusDescription() -> a
+    162:162:java.lang.String currentStatusName() -> b
+    170:170:java.lang.Integer id() -> a
+    182:185:java.lang.Integer evalutateForErrorCode(com.github.olaaronsson.process.ErrorCodeCarrier) -> a
+    190:217:void bail(java.lang.String,java.lang.Throwable,java.lang.Enum,java.lang.Integer) -> a
+    220:221:void logFinished() -> a
+    224:226:void saveInStatus(java.lang.Enum) -> a
+    26:31:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.impl.ProcessLogging -> com.github.olaaronsson.process.impl.ProcessLogging:
+    com.github.olaaronsson.process.impl.ProcessLogging INSTANCE -> a
+    15:21:void <init>(java.lang.String,java.lang.String,boolean) -> <init>
+    23:91:void <init>() -> <init>
+    94:97:void initLogging() -> initLogging
+    100:103:void initLogging(java.lang.String,java.lang.String,boolean) -> initLogging
+    106:119:java.lang.String getLoggingApp() -> a
+com.github.olaaronsson.process.impl.ProcessSubjectBase -> com.github.olaaronsson.process.impl.ProcessSubjectBase:
+    java.lang.Enum status -> status
+    java.lang.Integer errorCode -> a
+    java.lang.String processName -> a
+    10:10:void <init>() -> <init>
+    32:33:void setStatus(java.lang.Enum) -> setStatus
+    36:37:void setProcessName(java.lang.String) -> setProcessName
+    40:41:void setErrorCode(int) -> a
+    44:44:int getErrorCode() -> getErrorCode
+    57:57:java.lang.String doToString() -> doToString
+    66:66:java.lang.Enum getCurrentStatus() -> getCurrentStatus
+    71:71:java.lang.String getCurrentProcess() -> getCurrentProcess
+com.github.olaaronsson.process.impl.ProcessSubjectBase$Status -> com.github.olaaronsson.process.impl.ProcessSubjectBase$Status:
+    com.github.olaaronsson.process.impl.ProcessSubjectBase$Status PRE_PROCESS -> PRE_PROCESS
+    com.github.olaaronsson.process.impl.ProcessSubjectBase$Status PROCESS_FINISHED -> PROCESS_FINISHED
+    java.lang.Character sts -> a
+    com.github.olaaronsson.process.impl.ProcessSubjectBase$Status[] $VALUES -> a
+    18:18:com.github.olaaronsson.process.impl.ProcessSubjectBase$Status[] values() -> values
+    18:18:com.github.olaaronsson.process.impl.ProcessSubjectBase$Status valueOf(java.lang.String) -> valueOf
+    22:24:void <init>(java.lang.String,int,java.lang.Character) -> <init>
+    27:27:java.lang.Character getSts() -> getSts
+    18:19:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.impl.ProcessingFlags -> com.github.olaaronsson.process.impl.ProcessingFlags:
+    java.lang.String NEN_PROCESSING_LOG_DIR -> NEN_PROCESSING_LOG_DIR
+    java.lang.String NEN_PROCESSING_LOGGING_APP -> NEN_PROCESSING_LOGGING_APP
+    java.lang.String NEN_PROCESSING_LOGGING_SEPARATE_FILE -> NEN_PROCESSING_LOGGING_SEPARATE_FILE
+    4:4:void <init>() -> <init>
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader -> com.github.olaaronsson.process.impl.source.processor.CustomClassLoader:
+    java.lang.String basePackage -> a
+    17:19:void <init>(java.lang.String,java.lang.ClassLoader) -> <init>
+    35:41:java.lang.Class loadClass(java.lang.String) -> loadClass
+    1022:1029:java.lang.Class getClass(java.lang.String):22:29 -> loadClass
+    1022:1029:java.lang.Class loadClass(java.lang.String):36 -> loadClass
+    45:60:byte[] loadClassData(java.lang.String) -> a
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer -> com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$EnumContainer:
+    com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable[] enums -> a
+    java.lang.String className -> a
+    java.lang.String enumFieldName -> b
+    java.lang.Class sourceInspectionClass -> a
+    69:84:void <init>(java.lang.Class) -> <init>
+    87:87:com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable[] values() -> values
+    91:91:java.lang.String getClassName() -> getClassName
+    95:95:java.lang.String getEnumFieldName() -> getEnumFieldName
+    99:99:boolean isSane() -> isSane
+    103:116:java.lang.String getProblemDescription() -> getProblemDescription
+    78:80:void lambda$new$1(java.util.concurrent.atomic.AtomicInteger,java.lang.Object) -> a
+    78:78:java.lang.String lambda$null$0(java.lang.Object) -> a
+com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable -> com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable:
+    java.lang.String name() -> name
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepConstants -> com.github.olaaronsson.process.impl.source.processor.DaProcessStepConstants:
+    java.lang.String NL -> NL
+    java.nio.charset.Charset UTF8_CHARSET -> UTF8_CHARSET
+    java.lang.String HEADER_START_NEW -> a
+    int CHKSUM_POS -> a
+    java.lang.String COMMENT_HEADER -> b
+    java.lang.String HEADER_START_OLD -> c
+    java.util.Set NEN_BLACK_PROCESS_MAKESTEP_SUPPORTED_TYPES -> a
+    java.lang.String COMMENT_HEADER_END -> d
+    java.lang.String THEEND -> e
+    java.lang.String CHKSUM_ORIG -> f
+    java.lang.String MAKE_STEPS_SHORT_CLASS_NAME -> h
+    java.lang.String MAVEN_LOG_PREFIX -> i
+    java.lang.String BODY -> g
+    105:105:void <init>() -> <init>
+    108:109:void error(java.lang.String) -> a
+    112:113:void info(java.lang.String) -> b
+    116:117:void warn(java.lang.String) -> c
+    120:121:void error(javax.lang.model.element.Element,java.lang.String,java.lang.Object[]) -> a
+    124:124:java.lang.String mkMessage(java.lang.String) -> a
+    15:102:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepLookup -> com.github.olaaronsson.process.impl.source.processor.DaProcessStepLookup:
+    java.lang.String TMP_COMP_PATH -> TMP_COMP_PATH
+    21:21:void <init>() -> <init>
+    26:81:java.util.Set annotatedElementsToAppenders(java.util.Set,java.util.Set) -> annotatedElementsToAppenders
+    121:125:java.io.File getFileViaSunClassesReflectionHack(java.lang.Object) -> a
+    115:115:void lambda$isValidMethod$5(java.lang.String) -> a
+    76:80:void lambda$annotatedElementsToAppenders$4(java.util.Set,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender) -> a
+    76:76:boolean lambda$null$3(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.Object) -> a
+    1171:1171:boolean com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.matchStatusClass(java.lang.Object):171:171 -> a
+    1171:1171:boolean lambda$null$3(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.Object):76 -> a
+    73:73:void lambda$annotatedElementsToAppenders$2(java.util.Set,javax.lang.model.element.Element) -> a
+    30:71:void lambda$annotatedElementsToAppenders$1(java.util.Set,javax.lang.model.element.Element) -> b
+    2086:2116:boolean isValidMethod(javax.lang.model.element.ExecutableElement,java.lang.String):86:116 -> b
+    2086:2116:void lambda$annotatedElementsToAppenders$1(java.util.Set,javax.lang.model.element.Element):32 -> b
+    3090:3091:void com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.appendElementToWork(com.github.olaaronsson.process.impl.source.processor.ElementToWork):90:91 -> b
+    3090:3091:void lambda$annotatedElementsToAppenders$1(java.util.Set,javax.lang.model.element.Element):68 -> b
+    38:38:boolean lambda$null$0(java.lang.String,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender) -> a
+    4061:4061:java.lang.String com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.getOriginatingClass():61:61 -> a
+    4061:4061:boolean lambda$null$0(java.lang.String,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):38 -> a
+    23:23:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor -> com.github.olaaronsson.process.impl.source.processor.DaProcessStepProcessor:
+    java.util.Set hasRecievedCommentHeader -> a
+    58:59:void <init>() -> <init>
+    63:65:void init(javax.annotation.processing.ProcessingEnvironment) -> init
+    70:101:boolean process(java.util.Set,javax.annotation.processing.RoundEnvironment) -> process
+    105:108:void appendPossibleErrors(java.lang.StringBuilder,java.lang.String,java.lang.String) -> a
+    286:286:java.util.Set getSupportedAnnotationTypes() -> getSupportedAnnotationTypes
+    291:291:javax.lang.model.SourceVersion getSupportedSourceVersion() -> getSupportedSourceVersion
+    295:347:java.lang.Class loadStatusClassBySheerForceTmpCompileFromFile(java.io.File) -> a
+    262:262:void lambda$workAppenderElements$7(java.lang.StringBuilder,java.lang.Integer) -> a
+    221:257:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork) -> a
+    1028:1028:javax.lang.model.element.Element com.github.olaaronsson.process.impl.source.processor.ElementToWork.getAnnotatedElement():28:28 -> a
+    1028:1028:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):221 -> a
+    2028:2028:javax.lang.model.element.Element com.github.olaaronsson.process.impl.source.processor.ElementToWork.getAnnotatedElement():28:28 -> a
+    2028:2028:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):222 -> a
+    3028:3028:javax.lang.model.element.Element com.github.olaaronsson.process.impl.source.processor.ElementToWork.getAnnotatedElement():28:28 -> a
+    3028:3028:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):223 -> a
+    4028:4028:javax.lang.model.element.Element com.github.olaaronsson.process.impl.source.processor.ElementToWork.getAnnotatedElement():28:28 -> a
+    4028:4028:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):224 -> a
+    4065:4065:java.lang.String com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.getOriginatingClassShort():65:65 -> a
+    4065:4065:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):225 -> a
+    4167:4168:void com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.setSourceEncoding(java.nio.charset.Charset):167:168 -> a
+    4167:4168:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):230 -> a
+    5111:5215:void testLoadStatuses(java.lang.StringBuilder,java.lang.String,java.lang.String,java.lang.String,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):111:215 -> a
+    5111:5215:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):244 -> a
+    6175:6175:boolean com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.hasMatchedJavaScrFileForStatusClass():175:175 -> a
+    6175:6175:void testLoadStatuses(java.lang.StringBuilder,java.lang.String,java.lang.String,java.lang.String,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):152 -> a
+    6175:6175:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):244 -> a
+    6179:6179:java.io.File com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.getJavaScrFileForStatusClass():179:179 -> a
+    6179:6179:void testLoadStatuses(java.lang.StringBuilder,java.lang.String,java.lang.String,java.lang.String,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):153 -> a
+    6179:6179:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):244 -> a
+    7024:7024:java.lang.String com.github.olaaronsson.process.impl.source.processor.ElementToWork.getMethodName():24:24 -> a
+    7024:7024:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):254 -> a
+    8024:8024:java.lang.String com.github.olaaronsson.process.impl.source.processor.ElementToWork.getMethodName():24:24 -> a
+    8024:8024:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):255 -> a
+    8269:8272:void addMethod(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String):269:272 -> a
+    8269:8272:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):255 -> a
+    8275:8282:void writeSourceFile(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.String,java.lang.String):275:282 -> a
+    8275:8282:void addMethod(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String):271 -> a
+    8275:8282:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):255 -> a
+    9098:9098:java.io.File com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.getSrcFile():98:98 -> a
+    9098:9098:void writeSourceFile(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.String,java.lang.String):275 -> a
+    9098:9098:void addMethod(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String):271 -> a
+    9098:9098:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):255 -> a
+    10098:10098:java.io.File com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.getSrcFile():98:98 -> a
+    10098:10098:void writeSourceFile(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.String,java.lang.String):277 -> a
+    10098:10098:void addMethod(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String):271 -> a
+    10098:10098:void lambda$workAppenderElements$6(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List,com.github.olaaronsson.process.impl.source.processor.ElementToWork):255 -> a
+    226:226:void lambda$null$5(com.github.olaaronsson.process.impl.source.processor.ElementToWork) -> a
+    11028:11028:javax.lang.model.element.Element com.github.olaaronsson.process.impl.source.processor.ElementToWork.getAnnotatedElement():28:28 -> a
+    11028:11028:void lambda$null$5(com.github.olaaronsson.process.impl.source.processor.ElementToWork):226 -> a
+    197:197:boolean lambda$testLoadStatuses$4(java.lang.String,com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable) -> a
+    196:196:boolean lambda$testLoadStatuses$3(java.lang.String,com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable) -> b
+    184:184:boolean lambda$testLoadStatuses$2(java.lang.String,com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable) -> c
+    183:183:boolean lambda$testLoadStatuses$1(java.lang.String,com.github.olaaronsson.process.impl.source.processor.CustomClassLoader$Nameable) -> d
+    94:100:void lambda$process$0(java.util.Set,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender) -> a
+    11163:11164:void com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.clear():163:164 -> a
+    11163:11164:void lambda$process$0(java.util.Set,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):95 -> a
+    11219:11266:void workAppenderElements(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List):219:266 -> a
+    11219:11266:void lambda$process$0(java.util.Set,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):97 -> a
+    12094:12094:java.util.Set com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.getElementsToWork():94:94 -> a
+    12094:12094:void workAppenderElements(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List):219 -> a
+    12094:12094:void lambda$process$0(java.util.Set,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):97 -> a
+    12114:12135:void com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.doAppend():114:135 -> a
+    12114:12135:void workAppenderElements(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List):264 -> a
+    12114:12135:void lambda$process$0(java.util.Set,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):97 -> a
+    12139:12147:void com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.removePreviousAddition():139:147 -> a
+    12139:12147:void com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender.doAppend():120 -> a
+    12139:12147:void workAppenderElements(com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender,java.util.List):264 -> a
+    12139:12147:void lambda$process$0(java.util.Set,com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender):97 -> a
+com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender -> com.github.olaaronsson.process.impl.source.processor.DaProcessStepSourceAppender:
+    java.lang.StringBuilder sourceToAppend -> a
+    boolean hasAppended -> a
+    java.util.Set elementsToWork -> a
+    java.lang.String completeSourceOrigSource -> a
+    java.io.File srcFile -> a
+    java.lang.String originatingClass -> b
+    java.lang.String originatingShort -> c
+    java.lang.String originatingAppendeSource -> d
+    java.lang.String chkSumOrig -> e
+    java.lang.String chkSum -> f
+    java.nio.charset.Charset sourceEncoding -> a
+    java.io.File javaScrFileForStatusClass -> b
+    22:58:void <init>(java.io.File,java.lang.String,java.lang.String,java.lang.String) -> <init>
+    1086:1086:java.lang.String removeSpaceAndNewlines(java.lang.String):86:86 -> <init>
+    1086:1086:void <init>(java.io.File,java.lang.String,java.lang.String,java.lang.String):34 -> <init>
+    69:83:void setChkSum(java.lang.String) -> a
+    102:110:void append(java.lang.String,java.lang.String) -> a
+    150:155:void writeToFile(java.lang.String) -> b
+    159:159:java.lang.String doToString() -> doToString
+    183:184:void setJavaScrFileForStatusClass(java.io.File) -> setJavaScrFileForStatusClass
+com.github.olaaronsson.process.impl.source.processor.ElementToWork -> com.github.olaaronsson.process.impl.source.processor.ElementToWork:
+    java.lang.String UNDERSCORE -> UNDERSCORE
+    javax.lang.model.element.Element annotatedElement -> a
+    java.lang.Object classSymbol -> a
+    java.lang.String methodName -> a
+    13:17:void <init>(javax.lang.model.element.Element,java.lang.Object,java.lang.String) -> <init>
+    33:33:java.lang.String doToString() -> doToString
+com.github.olaaronsson.process.interfaces.AsyncExecutor -> com.github.olaaronsson.process.interfaces.AsyncExecutor:
+    void addProcess(com.github.olaaronsson.process.interfaces.Process) -> addProcess
+    void addJob(com.github.olaaronsson.process.interfaces.Job) -> addJob
+    void addJobWithTimeout(com.github.olaaronsson.process.interfaces.Job,long,java.util.concurrent.TimeUnit) -> addJobWithTimeout
+    void addJobListener(com.github.olaaronsson.process.interfaces.AsyncJobListener) -> addJobListener
+    void addProcessListener(com.github.olaaronsson.process.interfaces.AsyncProcessListener) -> addProcessListener
+    void kill() -> kill
+    void killAwaitTerminationBlocking(long,java.util.concurrent.TimeUnit) -> killAwaitTerminationBlocking
+    void killAwaitTerminationNonBlocking(long,java.util.concurrent.TimeUnit) -> killAwaitTerminationNonBlocking
+com.github.olaaronsson.process.interfaces.AsyncJobListener -> com.github.olaaronsson.process.interfaces.AsyncJobListener:
+    void jobExiting(com.github.olaaronsson.process.interfaces.Job) -> jobExiting
+com.github.olaaronsson.process.interfaces.AsyncProcessListener -> com.github.olaaronsson.process.interfaces.AsyncProcessListener:
+    void processExiting(com.github.olaaronsson.process.interfaces.Process) -> processExiting
+com.github.olaaronsson.process.interfaces.Job -> com.github.olaaronsson.process.interfaces.Job:
+    java.lang.String name() -> name
+    void doJob() -> doJob
+    com.github.olaaronsson.process.interfaces.ProcessSubject provideSubjectSample() -> provideSubjectSample
+    boolean isExecuting() -> isExecuting
+com.github.olaaronsson.process.interfaces.PersistenceService -> com.github.olaaronsson.process.interfaces.PersistenceService:
+    void save(com.github.olaaronsson.process.interfaces.ProcessSubject) -> save
+com.github.olaaronsson.process.interfaces.Process -> com.github.olaaronsson.process.interfaces.Process:
+    java.lang.String name() -> name
+    void process() -> process
+    java.lang.Enum[] criteriaStates() -> criteriaStates
+    java.lang.Enum finishedState() -> finishedState
+com.github.olaaronsson.process.interfaces.ProcessSubject -> com.github.olaaronsson.process.interfaces.ProcessSubject:
+    java.lang.Integer id() -> id
+    java.lang.String subjectIdentifier() -> subjectIdentifier
+    int getErrorCode() -> getErrorCode
+com.github.olaaronsson.process.interfaces.WorkingEntity -> com.github.olaaronsson.process.interfaces.WorkingEntity:
+    boolean isExecuting() -> isExecuting
+com.github.olaaronsson.process.internal.util.MD5Digest -> com.github.olaaronsson.process.internal.util.MD5Digest:
+    com.github.olaaronsson.process.internal.util.MD5Digest instance -> a
+    java.security.MessageDigest md -> a
+    37:43:void <init>() -> <init>
+    46:49:com.github.olaaronsson.process.internal.util.MD5Digest getInstance() -> getInstance
+    53:66:java.lang.String digest(java.io.File) -> digest
+    71:82:java.lang.String digestMessage(java.lang.String) -> digestMessage
+    87:101:byte[] fileOrMessageToBytes(java.io.File,java.lang.String,com.github.olaaronsson.process.internal.util.MD5Digest$DigestType) -> a
+    105:109:java.lang.String bytes2HEX(byte[]) -> a
+    113:120:byte[] inputStreamToBytes$4dfd4f08(java.io.InputStream) -> a
+com.github.olaaronsson.process.internal.util.MD5Digest$DigestType -> com.github.olaaronsson.process.internal.util.MD5Digest$a:
+    com.github.olaaronsson.process.internal.util.MD5Digest$DigestType FILE -> a
+    com.github.olaaronsson.process.internal.util.MD5Digest$DigestType MESSAGE -> b
+    33:33:void <init>(java.lang.String,int) -> <init>
+    33:34:void <clinit>() -> <clinit>
+com.github.olaaronsson.process.internal.util.SizeUtils -> com.github.olaaronsson.process.internal.util.SizeUtils:
+    11:11:void <init>() -> <init>
+    14:40:java.lang.String getFormattedMillisPrintoutFriendly(long) -> getFormattedMillisPrintoutFriendly
+com.github.olaaronsson.process.internal.util.domain.BaseDomainObject -> com.github.olaaronsson.process.internal.util.domain.BaseDomainObject:
+    3:3:void <init>() -> <init>
+    9:13:int hashCode() -> hashCode
+    18:24:boolean equals(java.lang.Object) -> equals
+    29:33:java.lang.String toString() -> toString
+com.github.olaaronsson.process.internal.util.domain.StringUtils -> com.github.olaaronsson.process.internal.util.domain.StringUtils:
+    7:7:void <init>() -> <init>
+    10:13:boolean isBlank(java.lang.String) -> isBlank
+    17:17:boolean hasContents(java.lang.String) -> hasContents
+com.github.olaaronsson.process.internal.util.domain.ToStringAble -> com.github.olaaronsson.process.internal.util.domain.ToStringAble:
+    java.lang.String doToString() -> doToString
+com.github.olaaronsson.process.internal.util.domain.ToStringBuilder -> com.github.olaaronsson.process.internal.util.domain.ToStringBuilder:
+    java.lang.StringBuilder builder -> a
+    26:29:void <init>(java.lang.String,java.lang.Object) -> <init>
+    31:33:void <init>() -> <init>
+    36:44:com.github.olaaronsson.process.internal.util.domain.ToStringBuilder append(java.lang.String,java.lang.Object) -> append
+    1048:1065:java.lang.String withNullRepresentation(java.lang.Object):48:65 -> append
+    1048:1065:com.github.olaaronsson.process.internal.util.domain.ToStringBuilder append(java.lang.String,java.lang.Object):42 -> append
+    1069:1077:java.lang.Object[] objectToArray(java.lang.Object):69:77 -> append
+    1069:1077:java.lang.String withNullRepresentation(java.lang.Object):59 -> append
+    1069:1077:com.github.olaaronsson.process.internal.util.domain.ToStringBuilder append(java.lang.String,java.lang.Object):42 -> append
+    81:95:java.lang.String extractArrayDescription(java.lang.Object[],java.lang.String) -> a
+    99:104:java.lang.String extractClassNameFromAnArray(java.lang.Object[]) -> a
+    110:114:java.lang.String doToString() -> doToString
+com.github.olaaronsson.process.internal.util.id.IdGenerator -> com.github.olaaronsson.process.internal.util.id.IdGenerator:
+    com.github.olaaronsson.process.internal.util.id.IdGenerator INSTANCE -> a
+    int COUNTER -> a
+    java.lang.Object counterLock -> a
+    java.lang.String seed -> a
+    java.security.SecureRandom secureRandom -> a
+    java.util.concurrent.atomic.AtomicInteger id -> a
+    23:34:void <init>() -> <init>
+    37:40:com.github.olaaronsson.process.internal.util.id.IdGenerator getInstance() -> getInstance
+    44:44:java.lang.Integer getNextId() -> getNextId
+    48:60:java.lang.String getId(int) -> getId
+    66:80:java.lang.String getIdMoreRandom(int,int) -> getIdMoreRandom
+    74:74:java.lang.String lambda$getIdMoreRandom$0(int) -> a
+com.github.olaaronsson.process.internal.util.io.Haltable -> com.github.olaaronsson.process.internal.util.io.Haltable:
+    void halt() -> halt
+com.github.olaaronsson.process.internal.util.io.IO -> com.github.olaaronsson.process.internal.util.io.IO:
+    java.lang.String DEF_ENCODING -> DEF_ENCODING
+    19:20:void <init>() -> <init>
+    28:41:java.io.File makeOrUseDir(java.lang.String) -> makeOrUseDir
+    53:60:boolean deleteRecursively(java.io.File) -> deleteRecursively
+    64:77:void overwriteStringToFileWithEncoding(java.lang.String,java.lang.String,java.lang.String) -> overwriteStringToFileWithEncoding
+    80:84:java.lang.String fileToString(java.lang.String,java.nio.charset.Charset) -> fileToString
+    90:126:boolean deleteRecursively(java.io.File,java.io.File[]) -> a
+    130:135:void close(java.io.InputStream) -> close
+    138:138:boolean hasContents(java.lang.String) -> hasContents
+com.github.olaaronsson.process.internal.util.io.IO$CouldNotCreateDirException -> com.github.olaaronsson.process.internal.util.io.IO$CouldNotCreateDirException:
+    147:147:void <init>() -> <init>
+com.github.olaaronsson.process.internal.util.io.IO$DirExistsButCannotBeWritteToException -> com.github.olaaronsson.process.internal.util.io.IO$DirExistsButCannotBeWritteToException:
+    144:144:void <init>() -> <init>
+com.github.olaaronsson.process.internal.util.io.IO$FileExistsButIsNotADirectoryException -> com.github.olaaronsson.process.internal.util.io.IO$FileExistsButIsNotADirectoryException:
+    141:141:void <init>() -> <init>
+com.github.olaaronsson.process.internal.util.io.LoggingService -> com.github.olaaronsson.process.internal.util.io.LoggingService:
+    void setRootLogLevel(ch.qos.logback.classic.Level) -> setRootLogLevel
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup -> com.github.olaaronsson.process.internal.util.io.Slf4JSetup:
+    com.github.olaaronsson.process.internal.util.io.Slf4JSetup instance -> a
+    ch.qos.logback.classic.LoggerContext context -> a
+    org.slf4j.Logger LOGGER -> a
+    37:90:void <init>(java.io.File,java.lang.String,boolean,java.lang.String) -> <init>
+    93:96:com.github.olaaronsson.process.internal.util.io.LoggingService getInstance() -> getInstance
+    101:102:void initForApp(java.lang.String) -> initForApp
+    105:106:void initForApp(java.lang.String,boolean) -> initForApp
+    109:110:void init(java.lang.String,java.lang.String) -> init
+    113:114:void init(java.lang.String,java.lang.String,boolean) -> init
+    117:118:void init(java.lang.String,java.lang.String,boolean,java.lang.String) -> init
+    121:134:void initInternal(java.lang.String,java.lang.String,boolean,java.lang.String) -> a
+    138:142:void setRootLogLevel(ch.qos.logback.classic.Level) -> setRootLogLevel
+    1224:1224:boolean weHaveALoglevelAndItIsNew(ch.qos.logback.classic.Level):224:224 -> setRootLogLevel
+    1224:1224:void setRootLogLevel(ch.qos.logback.classic.Level):138 -> setRootLogLevel
+    146:150:void halt() -> halt
+    153:165:ch.qos.logback.classic.Level resolveLevel(java.lang.String) -> resolveLevel
+    190:199:ch.qos.logback.core.rolling.RollingFileAppender getFilteredAppender(ch.qos.logback.classic.LoggerContext,ch.qos.logback.classic.encoder.PatternLayoutEncoder,java.lang.String,ch.qos.logback.classic.Level) -> a
+    2185:2186:void com.github.olaaronsson.process.internal.util.io.Slf4JSetup$ThresholdLoggerFilter.setLevel(ch.qos.logback.classic.Level):185:186 -> a
+    2185:2186:ch.qos.logback.core.rolling.RollingFileAppender getFilteredAppender(ch.qos.logback.classic.LoggerContext,ch.qos.logback.classic.encoder.PatternLayoutEncoder,java.lang.String,ch.qos.logback.classic.Level):195 -> a
+    203:210:ch.qos.logback.core.rolling.FixedWindowRollingPolicy getRollingPolicy(ch.qos.logback.classic.LoggerContext,ch.qos.logback.core.rolling.RollingFileAppender,java.lang.String) -> a
+    214:221:void setTriggerPolicy(ch.qos.logback.core.rolling.RollingFileAppender,ch.qos.logback.core.rolling.FixedWindowRollingPolicy) -> a
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup$1 -> com.github.olaaronsson.process.internal.util.io.Slf4JSetup$1:
+com.github.olaaronsson.process.internal.util.io.Slf4JSetup$ThresholdLoggerFilter -> com.github.olaaronsson.process.internal.util.io.Slf4JSetup$a:
+    ch.qos.logback.classic.Level level -> a
+    169:169:void <init>() -> <init>
+    169:169:ch.qos.logback.core.spi.FilterReply decide(java.lang.Object) -> decide
+    1174:1180:ch.qos.logback.core.spi.FilterReply decide(ch.qos.logback.classic.spi.ILoggingEvent):174:180 -> decide
+    1174:1180:ch.qos.logback.core.spi.FilterReply decide(java.lang.Object):169 -> decide
+    169:169:void <init>(byte) -> <init>
+com.github.olaaronsson.process.internal.util.reflect.ReflectionUtils -> com.github.olaaronsson.process.internal.util.reflect.ReflectionUtils:
+    15:15:void <init>() -> <init>
+    18:29:java.lang.reflect.Field getFieldRecursivelySilentFromInstance(java.lang.Object,java.lang.String) -> getFieldRecursivelySilentFromInstance
+    1055:1068:java.util.List getAllClasses(java.lang.Object):55:68 -> getFieldRecursivelySilentFromInstance
+    1055:1068:java.lang.reflect.Field getFieldRecursivelySilentFromInstance(java.lang.Object,java.lang.String):19 -> getFieldRecursivelySilentFromInstance
+    34:42:java.lang.Object getFieldValueSilent(java.lang.Object,java.lang.String) -> getFieldValueSilent
+    46:51:java.lang.reflect.Field getFieldValueSilent(java.lang.Class,java.lang.String) -> a
+    22:22:void lambda$getFieldRecursivelySilentFromInstance$0(java.util.List,java.lang.reflect.Field) -> a
+com.github.olaaronsson.process.internal.util.thread.ExitHook -> com.github.olaaronsson.process.internal.util.thread.ExitHook:
+    com.github.olaaronsson.process.internal.util.thread.Exitable toTerminate -> a
+    7:7:void <init>() -> <init>
+    9:13:void <init>(java.lang.Thread) -> <init>
+    15:17:void <init>(com.github.olaaronsson.process.internal.util.thread.Exitable) -> <init>
+    21:22:void run() -> run
+    25:31:void addExitHook(java.lang.Thread) -> addExitHook
+    34:36:void addExitHook(com.github.olaaronsson.process.internal.util.thread.Exitable) -> addExitHook
+    39:62:void add(java.lang.Object) -> add
+    43:59:void lambda$add$0(java.lang.Object) -> a
+com.github.olaaronsson.process.internal.util.thread.Exitable -> com.github.olaaronsson.process.internal.util.thread.Exitable:
+    void exitz() -> exitz
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool -> com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool:
+    org.slf4j.Logger LOGGER -> a
+    java.util.concurrent.ExecutorService executor -> a
+    java.util.concurrent.ScheduledExecutorService executorForTimeout -> a
+    22:29:void <init>() -> <init>
+    32:38:void init(boolean) -> a
+    41:43:void submit(java.lang.Runnable) -> submit
+    46:54:void submitWithTimeout(java.lang.Runnable,long,java.util.concurrent.TimeUnit) -> submitWithTimeout
+    58:66:void stopServer() -> stopServer
+    69:94:void awaitTerminationNonBlocking(long,java.util.concurrent.TimeUnit) -> awaitTerminationNonBlocking
+    97:103:void awaitTerminationBlocking(long,java.util.concurrent.TimeUnit) -> awaitTerminationBlocking
+    107:108:void exitz() -> exitz
+    81:88:void lambda$awaitTerminationNonBlocking$2(java.util.concurrent.Future,long,java.util.concurrent.TimeUnit) -> a
+    75:79:void lambda$awaitTerminationNonBlocking$1(long,java.util.concurrent.TimeUnit) -> a
+    49:53:void lambda$submitWithTimeout$0(java.util.concurrent.Future,long,java.util.concurrent.TimeUnit) -> b
+    14:14:java.util.concurrent.ScheduledExecutorService access$200(com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool) -> a
+    14:14:java.util.concurrent.ScheduledExecutorService access$202$77b5149(com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool) -> b
+    14:14:org.slf4j.Logger access$300(com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool) -> a
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool$ReaperThread -> com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool$a:
+    long reeperAwait -> a
+    com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool this$0 -> a
+    113:115:void <init>(com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool,long) -> <init>
+    120:126:void run() -> run
+    130:135:void exitz() -> exitz
+    110:110:void <init>(com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool,long,byte) -> <init>
+com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool$Task -> com.github.olaaronsson.process.internal.util.thread.SimpleOneThreadedCacheableThreadPool$b:
+    org.slf4j.Logger LOG -> a
+    java.lang.Runnable myRunnable -> a
+    140:145:void <init>(java.lang.Runnable) -> <init>
+    149:155:java.lang.Long call() -> a
+    138:138:java.lang.Object call() -> call
+    138:138:void <init>(java.lang.Runnable,byte) -> <init>
+com.github.olaaronsson.process.util.ClassAnnotationUtil -> com.github.olaaronsson.process.util.ClassAnnotationUtil:
+    5:5:void <init>() -> <init>
+    14:18:java.lang.String getValueOverTypeMirror(com.github.olaaronsson.process.util.ClassAnnotationUtil$GetClassValue) -> getValueOverTypeMirror
+com.github.olaaronsson.process.util.ClassAnnotationUtil$GetClassValue -> com.github.olaaronsson.process.util.ClassAnnotationUtil$GetClassValue:
+    void execute() -> execute
+com.github.olaaronsson.process.util.MavenWriter -> com.github.olaaronsson.process.util.MavenWriter:
+    java.lang.String MESSAGE_SEPARATOR -> MESSAGE_SEPARATOR
+    java.lang.String COLON -> COLON
+    javax.annotation.processing.Messager messager -> a
+    com.github.olaaronsson.process.util.MavenWriter instance -> a
+    50:51:void <init>() -> <init>
+    54:56:void <init>(javax.annotation.processing.Messager) -> <init>
+    61:64:com.github.olaaronsson.process.util.MavenWriter getInstance(javax.annotation.processing.Messager) -> getInstance
+    68:71:com.github.olaaronsson.process.util.MavenWriter getInstance() -> getInstance
+    75:76:void error(javax.lang.model.element.Element,java.lang.String,java.lang.Object[]) -> error
+    79:80:void error(java.lang.String) -> error
+    83:84:void info(java.lang.String) -> info
+    87:88:void warn(java.lang.String) -> warn
+    91:121:java.lang.String formattedErrors(java.lang.String) -> formattedErrors
+    99:119:void lambda$formattedErrors$1(java.lang.StringBuilder,java.lang.String) -> a
+    95:97:void lambda$formattedErrors$0(java.lang.String) -> a
+com.github.olaaronsson.process.util.ThrowableUtils -> com.github.olaaronsson.process.util.ThrowableUtils:
+    4:4:void <init>() -> <init>
+    7:7:java.lang.String getTopStackInfo(java.lang.Throwable) -> getTopStackInfo

@@ -1,2 +1,2 @@
 # catchitcozucan
-process utility library for coding stateful subjects
+Project moved here : https://github.com/catchitcozucan/core
